@@ -13,6 +13,8 @@ import {
 } from 'lucide-react'
 import { EnergyTradingCard } from '@/components/EnergyTradingCard'
 import { DAOVotingCard } from '@/components/DAOVotingCard'
+import { MobileWallet } from '@/components/mobile/MobileWallet'
+import { BiometricAuth } from '@/components/security/BiometricAuth'
 import { StatsCard } from '@/components/StatsCard'
 import { WalletConnect } from '@/components/WalletConnect'
 
@@ -78,7 +80,7 @@ export default function HomePage() {
         />
         <StatsCard
           title="DAO Proposals"
-          value={stats?.totalProposals || '0'}
+          value={stats?.totalProposals?.toLocaleString() || '0'}
           icon={Shield}
           color="text-purple-600"
           bgColor="bg-purple-100"
@@ -111,11 +113,27 @@ export default function HomePage() {
         </motion.div>
       </div>
 
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.35 }}
+      >
+        <BiometricAuth />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+      >
+        <MobileWallet />
+      </motion.div>
+
       {/* Features Section */}
       <motion.section 
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4 }}
+        transition={{ delay: 0.45 }}
         className="py-12"
       >
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
@@ -128,7 +146,7 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Global Access</h3>
             <p className="text-gray-600">
-              Trade energy anywhere in the world with Stellar's fast, low-cost network
+              Trade energy anywhere in the world with Stellar&apos;s fast, low-cost network
             </p>
           </div>
           

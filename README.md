@@ -24,6 +24,20 @@ The mobile wallet dashboard now models the core requirements for energy trading 
 
 Core implementation files live under `src/components/mobile`, `src/hooks/useMobileWallet.ts`, `src/services/mobile`, and `src/types/mobile-wallet.ts`.
 
+## Biometric Authentication
+
+The biometric authentication dashboard now models secure mobile access and transaction approval with:
+
+- Fingerprint verification under 1 second for device access
+- Face recognition accuracy above 98%
+- Voice biometric verification within 2 seconds
+- Device-wide fallback coverage across PIN, passkey, hardware-key, and recovery flows
+- Hardware-backed secure biometric storage aligned to FIPS 140-3 levels
+- Multi-factor biometric confirmation for higher-value energy transactions
+- Biometric analytics for modality adoption, success rates, and compliance posture
+
+Core implementation files live under `src/components/security`, `src/hooks/useBiometricAuth.ts`, `src/services/security`, and `src/types/biometric.ts`.
+
 ## Getting Started
 
 ### Prerequisites
