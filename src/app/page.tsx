@@ -13,6 +13,7 @@ import {
 } from 'lucide-react'
 import { EnergyTradingCard } from '@/components/EnergyTradingCard'
 import { DAOVotingCard } from '@/components/DAOVotingCard'
+import { MobileWallet } from '@/components/mobile/MobileWallet'
 import { StatsCard } from '@/components/StatsCard'
 import { WalletConnect } from '@/components/WalletConnect'
 import { ServiceWorkerRegistration } from '@/offline/components/ServiceWorkerRegistration'
@@ -99,6 +100,7 @@ export default function HomePage() {
       {/* Main Features */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <motion.div
+          id="trading"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
@@ -107,6 +109,7 @@ export default function HomePage() {
         </motion.div>
         
         <motion.div
+          id="dao"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
@@ -142,7 +145,7 @@ export default function HomePage() {
             </div>
             <h3 className="text-xl font-semibold mb-2">Global Access</h3>
             <p className="text-gray-600">
-              Trade energy anywhere in the world with Stellar's fast, low-cost network
+              Trade energy anywhere in the world with the Stellar network&apos;s fast, low-cost rails
             </p>
           </div>
           
